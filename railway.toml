@@ -1,0 +1,3 @@
+[deploy]
+install = "pnpm install"
+start = "pnpm run develop"
