@@ -8,8 +8,7 @@
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi",
-    "postinstall": "pnpm install"
+    "strapi": "strapi"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.10.2",
