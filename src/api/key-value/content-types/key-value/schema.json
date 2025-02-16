@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_values",
+  "info": {
+    "singularName": "key-value",
+    "pluralName": "key-values",
+    "displayName": "KeyValue"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Value": {
+      "type": "string"
+    }
+  }
+}

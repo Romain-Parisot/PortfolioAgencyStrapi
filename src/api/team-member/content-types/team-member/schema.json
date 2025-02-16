@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "TeamMember"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "FullName": {
+      "type": "string"
+    },
+    "ProfilePicture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "LinkedinUrl": {
+      "type": "string"
+    }
+  }
+}
