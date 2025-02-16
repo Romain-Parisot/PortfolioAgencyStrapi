@@ -466,6 +466,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     videoUrl: Schema.Attribute.String;
+    websiteUrl: Schema.Attribute.String;
   };
 }
 

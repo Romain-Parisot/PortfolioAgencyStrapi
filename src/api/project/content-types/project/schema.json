@@ -47,6 +47,9 @@
     },
     "videoUrl": {
       "type": "string"
+    },
+    "websiteUrl": {
+      "type": "string"
     }
   }
 }
