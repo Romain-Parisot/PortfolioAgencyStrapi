@@ -31,7 +31,6 @@
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=8.0.0"
   },
-  "packageManager": "npm@8.6.0",
   "strapi": {
     "uuid": "f8afc471-63cd-4412-9a23-aa82b6022ec0"
   }
