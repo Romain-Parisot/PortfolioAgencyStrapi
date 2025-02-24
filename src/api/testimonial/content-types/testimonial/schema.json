@@ -19,9 +19,6 @@
     },
     "JobTitle": {
       "type": "string"
-    },
-    "Url": {
-      "type": "string"
     }
   }
 }
