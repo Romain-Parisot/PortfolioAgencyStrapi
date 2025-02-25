@@ -429,6 +429,35 @@ export interface ApiKeyValueKeyValue extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiProjectTypeProjectType extends Struct.CollectionTypeSchema {
+  collectionName: 'project_types';
+  info: {
+    displayName: 'ProjectType';
+    pluralName: 'project-types';
+    singularName: 'project-type';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project-type.project-type'
+    > &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String;
+    projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -456,6 +485,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::project.project'
+    >;
+    project_types: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::project-type.project-type'
     >;
     publishedAt: Schema.Attribute.DateTime;
     stacks: Schema.Attribute.Relation<'manyToMany', 'api::stack.stack'>;
@@ -1070,6 +1103,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::feature.feature': ApiFeatureFeature;
       'api::key-value.key-value': ApiKeyValueKeyValue;
+      'api::project-type.project-type': ApiProjectTypeProjectType;
       'api::project.project': ApiProjectProject;
       'api::stack.stack': ApiStackStack;
       'api::team-member.team-member': ApiTeamMemberTeamMember;

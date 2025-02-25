@@ -50,6 +50,12 @@
     },
     "websiteUrl": {
       "type": "string"
+    },
+    "project_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-type.project-type",
+      "mappedBy": "projects"
     }
   }
 }
