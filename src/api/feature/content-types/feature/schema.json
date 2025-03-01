@@ -4,16 +4,27 @@
   "info": {
     "singularName": "feature",
     "pluralName": "features",
-    "displayName": "Feature"
+    "displayName": "Feature",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
   },
   "attributes": {
     "Name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "projects": {
       "type": "relation",

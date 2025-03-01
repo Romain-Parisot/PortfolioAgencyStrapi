@@ -4,16 +4,35 @@
   "info": {
     "singularName": "key-value",
     "pluralName": "key-values",
-    "displayName": "KeyValue"
+    "displayName": "KeyValue",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "Label": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Value": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "iconName": {
       "type": "string"
     }
   }
