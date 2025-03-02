@@ -11,6 +11,10 @@ export default ({ env }) => ({
         ? { rejectUnauthorized: false }
         : false,
     },
+    pool: {
+      min: 0, // Allow connections to close when idle
+      max: 2, // Limit max connections to avoid excessive memory usage
+    },
     migrations: {
       tableName: "knex_migrations",
     },
