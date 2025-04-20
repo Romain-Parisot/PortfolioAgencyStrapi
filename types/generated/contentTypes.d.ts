@@ -522,6 +522,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         };
       }>;
     features: Schema.Attribute.Relation<'manyToMany', 'api::feature.feature'>;
+    Icon: Schema.Attribute.Media<'images'>;
     Images: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
