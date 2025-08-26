@@ -577,6 +577,7 @@ export interface ApiStackStack extends Struct.CollectionTypeSchema {
 export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   collectionName: 'team_members';
   info: {
+    description: '';
     displayName: 'TeamMember';
     pluralName: 'team-members';
     singularName: 'team-member';
@@ -589,6 +590,8 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     FullName: Schema.Attribute.String;
+    JobPosition: Schema.Attribute.String;
+    JobTitle: Schema.Attribute.String;
     LinkedinUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
