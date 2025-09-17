@@ -34,6 +34,6 @@ export default {
   },
   bootstrap(app: StrapiApp) {
     registerPWA();
-    console.log(app);
+    console.log("PWA enabled for Strapi Admin");
   },
 };
